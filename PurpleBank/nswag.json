@@ -1,0 +1,44 @@
+{
+  "runtime": "Net70",
+  "defaultVariables": null,
+  "documents": [
+    {
+      "filePath": "API/cds_banking.json",
+      "documentType": "Swagger2",
+      "resolveJsonReference": true
+    }
+  ],
+  "codeGenerators": {
+    "openApiToCSharpControllers": {
+      "controllerTarget": "AspNetCore",
+      "controllerType": "Abstract",
+      "controllerStyle": "PascalCase",
+      "operationGenerationMode": "SingleClientFromOperationId",
+      "generateOptionalParameters": true,
+      "generateJsonMethods": true,
+      "responseArrayType": "System.Collections.Generic.ICollection",
+      "responseDictionaryType": "System.Collections.Generic.IDictionary",
+      "wrapResponses": false,
+      "generateClientInterfaces": true,
+      "injectHttpClient": true,
+      "disposeHttpClient": false,
+      "output": "./Controllers",
+      "className": "{controller}Controller",
+      "namespace": "PurpleBank.Controllers",
+      "additionalNamespaceUsages": [
+        "PurpleBank.Models",
+        "System",
+        "System.Collections.Generic",
+        "System.Threading.Tasks",
+        "Microsoft.AspNetCore.Mvc",
+        "Newtonsoft.Json"
+      ],
+      "requiredPropertiesMustBeDefined": true,
+      "excludedTypeNames": [],
+      "excludedParameterNames": [],
+      "wrapDtoExceptions": false,
+      "generateDtoTypes": false,
+      "generateControllerInterfaces": false
+    }
+  }
+}

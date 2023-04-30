@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-PurpleBank-6a82897f-bfe8-4579-bfb1-094148492649</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BankingController-Gpt-1g.cs" />
+    <Compile Remove="Controllers\BankingController-Nswag-1x.cs" />
+    <Compile Remove="Controllers\BankingController-v0.cs" />
+    <Compile Remove="Controllers\BankingController-v0x-nswag.cs" />
+    <Compile Remove="Controllers\BankingController-v1-AIGenBasedOnData.cs" />
+    <Compile Remove="Controllers\BankingController-v1g-AIGenBasedOnData.cs" />
+    <Compile Remove="Controllers\BankingController-v1g-GptGenBasedOnData.cs" />
+    <Compile Remove="Controllers\BankingControllerImpl.cs" />
+    <Compile Remove="Controllers\IBankingController.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="Program - v0.cs" />
+    <Compile Remove="Program-Gpt-1g.cs" />
+    <Compile Remove="Program-JUNK InMemory.cs" />
+    <Compile Remove="Program-Nswag-1x.cs" />
+    <Compile Remove="Program-Nswag-2x.cs" />
+    <Compile Remove="Program-v1 InMemory.cs" />
+    <Compile Remove="Program-v1-AIGenBasedOnData.cs" />
+    <Compile Remove="Program-v1g-AIGenBasedOnData.cs" />
+    <Compile Remove="Program-v1g-GptGenBasedOnData.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.9.0" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="2.9.0" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="2.9.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.18.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
+
+</Project>
