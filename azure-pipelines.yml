@@ -4,12 +4,34 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+  branches:
+    include:
+    - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
+
+variables:
+- group: ClientIdTenantIdClientSecret
+
 
 steps:
-- script: |
-    chmod +x azure_deploy_simple.sh
-    ./azure_deploy_simple.sh
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'PurpleBankServiceConnection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Installing git..."
+      sudo apt-get install -y git
+      
+      echo "Cloning repository..."
+      git clone https://github.com/plantys/PurpleBank.git
+      
+      echo "Running azure_deploy_simple_nosecret.sh script..."
+      cd YourRepository
+      chmod +x azure_deploy.sh
+      export CLIENT_ID=$(ClientId)
+      export TENANT_ID=$(TenantId)
+      export CLIENT_SECRET=$(ClientSecret)
+      ./azure_deploy.sh
