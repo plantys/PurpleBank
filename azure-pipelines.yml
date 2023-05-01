@@ -18,7 +18,7 @@ variables:
 steps:
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Pay-As-You-Go'
+    azureSubscription: 'PurpleBankServiceConnection'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
