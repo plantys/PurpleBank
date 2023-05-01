@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Login to Azure
+az login
+
 # Variables
 resourceGroupName="rg-purplebank"
 location="australiaeast"
