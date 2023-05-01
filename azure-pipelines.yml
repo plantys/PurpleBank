@@ -11,5 +11,5 @@ pool:
 
 steps:
 - script: |
-    chmod +x azure_deploy.sh
-    ./azure_deploy.sh
+    chmod +x azure_deploy_simple.sh
+    ./azure_deploy_simple.sh
